@@ -1,2 +1,172 @@
 @import "nullstyle";
+@font-face {
+    font-family: Helvetica;
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: url(fonts/helvetica_bold.otf);
+}
+@font-face{
+    font-family: Helvetica;
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url(fonts/helvetica_regular.otf);
 
+}
+@font-face{
+    font-family: Helvetica-Neue;
+    font-style: normal;
+    font-weight: 500;
+    font-display: swap;
+    src: url(/fonts/Helvetica-Neue-LT-Com-65-Medium.ttf);
+
+}
+@font-face{
+    font-family: NetflixSans;
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: url(/fonts/Netflix\ Sans\ Bold.otf);
+}
+@font-face{
+    font-family: NetflixSans;
+    font-style: normal;
+    font-weight: 300;
+    font-display: swap;
+    src: url(/fonts/Netflix\ Sans\ Light.otf);
+}
+@font-face{
+    font-family: NetflixSans;
+    font-style: normal;
+    font-weight: 500;
+    font-display: swap;
+    src: url(/fonts/Netflix\ Sans\ Medium.otf);
+}
+@font-face{
+    font-family: NetflixSans;
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url(/fonts/NetflixSansRegular.ttf);
+}
+@font-face{
+    font-family: NetflixSans;
+    font-style: normal;
+    font-weight: 100;
+    font-display: swap;
+    src: url(/fonts/NetflixSansThin.ttf);
+}
+
+body{
+    font-size: 16px;
+    color: #FFFFFF;
+}
+
+.wrapper{
+    width: 100%;
+    height: 100vh;
+    background: url(/img/background.png) no-repeat center;
+    -webkit-background-size: cover;
+    background-size: cover;
+}
+
+.zag{
+    font-family: 'Helvetica';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 72px;
+    line-height: 83px;
+    color: #FFFFFF;
+    width: 100%;
+    max-width: 759px;
+    padding: 64px 0 0 120px;
+}
+.container{
+    font-size: 55px;
+    width: 100%;
+    max-width: 1366px;
+    margin: 0 auto;
+    
+}
+.header{
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+
+.header__inner{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header__logo{
+    font-family: 'Helvetica';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 37px;
+    margin: 25.5px 0 0 0 ;
+}
+.nav{
+    font-family: 'Helvetica';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 18px;
+    opacity: 0.7;
+    
+}
+
+.nav__link{
+    color: #FFFFFF;
+    display: inline-block;
+    vertical-align: top;
+    margin: 25.5px 32px 8px 0;
+    border-bottom: 2px solid transparent;
+    position: relative;
+
+}
+
+.nav__link::after{
+    content: "";
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: #FFFFFF;
+    opacity: 0;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 1;
+    transition: opacity .2s linear;
+}
+.nav__link:hover::after{
+    opacity: 1;
+    
+}
+.search{
+    margin: 0 auto;
+    
+    border-radius: 16px;
+    width: 100%;
+    max-width: 1126px;
+    background-color: rgba(255, 255, 255, 0.4);
+    justify-content: center;
+    height: 60px;
+    // padding: 8px, 16px, 8px, 16px;
+}
+
+.search__form{
+    display: flex;
+}
+
+// .search__text{
+//     background-color: rgba(255, 255, 255, 0.4);
+//     width: 378px;
+    
+// }
